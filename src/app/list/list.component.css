@@ -1,0 +1,42 @@
+:host{
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-container{
+  height: 100vh;
+  width: 100vw;
+}
+.list-item{
+  margin-top: 2%;
+  max-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  color: grey;
+}
+
+.card-container:hover{
+  background-color: gray;
+}
+
+.list-item-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 45%;
+}
+
+.icon-text {
+  line-height: 160%;
+  width: auto;
+}

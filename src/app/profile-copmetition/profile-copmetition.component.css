@@ -1,0 +1,16 @@
+md-card{
+  height: 100vmax;
+}
+
+.competition-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.info-title {
+  color: slategrey;
+  text-align: center;
+  font-size: x-large;
+}

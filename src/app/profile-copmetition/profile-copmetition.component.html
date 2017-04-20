@@ -1,0 +1,38 @@
+<md-card>
+  <md-card-content *ngIf="competition!=undefined; else: elseBlock">
+    <div class="competition-wrapper">
+      <div class="info-title">{{competition.title}}</div>
+      <div class="stat-content">
+        <label for="company">
+          <md-icon>business</md-icon>
+        </label><div id="company" class="icon-text">{{competition.hosted_by}}</div>
+      </div>
+      <div class="stat-content">
+        <label for="time">
+          <md-icon>watch_later</md-icon>
+        </label><div id="time" class="icon-text">{{competition.start_date}} - {{competition.end_date}}</div>
+      </div>
+      <div class="stat-content">
+        <label for="start">
+          <md-icon>send</md-icon>
+        </label><div id="start" class="icon-text">{{competition.start_loc}}</div>
+      </div>
+      <div class="stat-content">
+        <label for="finnish">
+          <md-icon>vertical_align_bottom
+          </md-icon>
+        </label><div id="finnish" class="icon-text">{{competition.stop_loc}}</div>
+      </div>
+      <div class="stat-content">
+        <label for="lenght">
+          <md-icon>directions_run</md-icon>
+        </label><div id="lenght" class="icon-text">{{competition.total_length}} km</div>
+      </div>
+    </div>
+  </md-card-content>
+  <ng-template #elseBlock>
+    <div class="filler">
+      No active competitions.
+    </div>
+  </ng-template>
+</md-card>

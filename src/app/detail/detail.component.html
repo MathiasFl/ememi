@@ -1,0 +1,70 @@
+<div class="detail-container">
+  <md-tab-group>
+    <md-tab label="Detail">
+      <div class="fill">
+        <md-card class="top-card">
+          <div class="fill-title">
+            {{competition?.title}}
+          </div>
+          <div class="fill-host">
+            {{competition?.hosted_by}}
+          </div>
+          <div class="fill-content">
+            More info about the competition
+          </div>
+        </md-card>
+        <md-card *ngIf="active==false; else elseBlock" class="bottom-bitch">
+          <div class="fill-button">
+          <button md-raised-button (click)="makeActive()">Make this my active competition</button>
+          </div>
+        </md-card>
+        <ng-template #elseBlock>
+          <md-card class="bottom-bitch">
+            Profile info:
+
+          </md-card>
+        </ng-template>
+        <div *ngIf="active" class="add-step">
+          <button md-fab (click)="addSteps()"><md-icon>add</md-icon></button>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab label="Highscore">
+      <div *ngIf="highscore_profiles != 0; else nooneBlock" class="fill">
+        <div *ngFor="let profile of highscore_profiles" class="card-container">
+          <md-card class="list-item" routerLink='/profile/{{profile.id}}' routerLinkActive="active">
+            <div class="card-image" [style.background]="'url('+ profile?.image +')'" [style.background-size]="'cover'"></div>
+            <div class="row-wrapper">
+              <div class="list-item-wrapper center">
+                <div>{{profile.name}}</div>
+              </div>
+              <div class="list-item-wrapper">
+                <div class="stat-content">
+                  <label for="km-run">
+                    <md-icon>directions_run</md-icon>
+                  </label><div id="km-run" class="icon-text">{{profile?.length_km}} km</div>
+                </div>
+                <div class="stat-content">
+                  <label for="km-run">
+                    <md-icon>pets</md-icon>
+                  </label><div id="steps" class="icon-text">{{profile?.steps}}</div>
+                </div>
+              </div>
+            </div>
+          </md-card>
+        </div>
+      </div>
+      <ng-template #nooneBlock>
+        <md-card class="fill">
+          <div class="center">
+            There is no competitors :(
+          </div>
+        </md-card>
+      </ng-template>
+    </md-tab>
+    <md-tab label="Map">
+      <h1>Here is the map</h1>
+      <p>This is not implemented cuz time</p>
+    </md-tab>
+  </md-tab-group>
+</div>

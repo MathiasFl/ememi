@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container class="main-container">
+  <md-sidenav #sidenav class="sidenav">
+    <md-nav-list class="sidenav-list">
+      <a md-list-item class="sidenav-list-item" routerLink='/profile/{{profile?.id}}' routerLinkActive="active">Min Profil</a>
+      <a md-list-item class="sidenav-list-item" routerLink='/list' routerLinkActive="active">Se alle konkurranser</a>
+      <a md-list-item class="sidenav-list-item" routerLink='/detail' routerLinkActive="active">Min aktive
+        konkurranse</a>
+    </md-nav-list>
+  </md-sidenav>
+  <md-toolbar color='primary' class="navbar">
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <span class="spacer"></span>
+    <a routerLink="/profile/{{profile?.id}}">
+      <img src="{{profile?.image}}" alt={{profile?.initials}} class="nav-profile-image">
+    </a>
+  </md-toolbar>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-container>

@@ -1,0 +1,22 @@
+<div class="list-container">
+  <div *ngFor="let competition of competitions" class="card-container">
+    <md-card class="list-item" routerLink='/detail/{{competition.id}}' routerLinkActive="active">
+      <div class="list-item-wrapper">
+        <div>{{competition.title}}</div>
+        <div class="stat-content">
+          <label for="time">
+            <md-icon>watch_later</md-icon>
+          </label><div id="time" class="icon-text">{{competition.start_date}} - {{competition.end_date}}</div>
+        </div>
+      </div>
+      <div class="list-item-wrapper">
+        <div>Hosted by:{{competition.hosted_by}}</div>
+        <div class="stat-content">
+          <label for="lenght">
+            <md-icon>directions_run</md-icon>
+          </label><div id="lenght" class="icon-text">{{competition.total_length}} km</div>
+        </div>
+      </div>
+    </md-card>
+  </div>
+</div>

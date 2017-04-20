@@ -1,0 +1,45 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+app-root{
+   width: 100vw;
+  height: 100vh;
+  display: block
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidenav-content {
+  background-color: darkgray;
+  display: flex;
+  height: 91.3%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  min-width: 45%;
+  padding: 20px;
+}
+
+.sidenav-list {
+  padding-top: 5%;
+}
+
+.sidenav-list-item {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+
+.nav-profile-image{
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}

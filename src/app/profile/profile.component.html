@@ -1,0 +1,28 @@
+<div class="profile-container">
+  <md-card>
+    <md-card-content class="main-profile-card">
+        <div class="card-image" [style.background]="'url('+ profile?.image +')'" [style.background-size]="'cover'">
+        </div>
+        <md-card class="card-profile-container">
+          <md-card-content>Name: {{profile?.name}}</md-card-content>
+          <md-card-content>Adresse:  home  </md-card-content>
+        </md-card>
+    </md-card-content>
+  </md-card>
+  <md-card id="secondary-card">
+    <md-card-content>
+      <div class="stat-content">
+        <label for="km-run">
+          <md-icon>directions_run</md-icon>
+        </label><div id="km-run" class="icon-text">{{profile?.length_km}} km</div>
+      </div>
+      <div class="stat-content">
+        <label for="km-run">
+          <md-icon>pets</md-icon>
+        </label><div id="steps" class="icon-text">{{profile?.steps}}</div>
+      </div>
+    </md-card-content>
+  </md-card>
+
+  <app-profile-copmetition [competition_id]="profile?.active_competition_id" routerLink='/detail/{{profile?.active_competition_id}}' routerLinkActive="active" ></app-profile-copmetition>
+</div>

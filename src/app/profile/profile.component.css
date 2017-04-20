@@ -1,0 +1,57 @@
+:host{
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+.profile-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+.card-image{
+  margin: 0;
+  width: 30vw;
+  height: 15vh;
+  display: block;
+  border-radius: 50%;
+}
+
+.main-profile-card{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-profile-container{
+  color: gray;
+}
+
+/deep/ .stat-content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  font-size: large;
+  color: grey;
+}
+
+/deep/ .icon-text {
+  line-height: 160%;
+  width: 30%;
+  padding-left: 5%;
+}
+
+#secondary-card{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+app-profile-copmetition{
+  height: 100%;
+  flex: 1 1 auto;
+}
